@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0.0"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Top Row -->
+    <div class="row">
+      <div class="card" id="accelerometer">
+        <h5 class="card-title">Accelerometer Data</h5>
+        <canvas id="accelerometerChart"></canvas>
+      </div>
+      <div class="card" id="metallicPresence">
+        <h5 class="card-title">Metallic Presence</h5>
+        <canvas id="metallicPresenceChart"></canvas>
+      </div>
+      <div class="card" id="uvSensor">
+        <h5 class="card-title">UV Sensor Data</h5>
+        <canvas id="uvSensorChart"></canvas>
+        <div id="uvAlert" class="alert">Height exceeds 2 meters!</div>
+      </div>
+    </div>
+    <!-- Middle Row -->
+    <div class="row2">
+      <div class="card2" id="magnetometer">
+        <h5 class="card-title">Magnetometer Data</h5>
+        <canvas id="magnetometerChart"></canvas>
+      </div>
+    </div>
+    <!-- Bottom Row -->
+    <div class="row">
+      <div class="card" id="batteryLevel">
+        <h5 class="card-title">Battery Level</h5>
+        <canvas id="batteryLevelChart"></canvas>
+      </div>
+      <div class="card" id="sensorStatus">
+        <h5 class="card-title">Sensor Status</h5>
+        <ul id="sensorStatusList">
+          <li>Sensor 1: OK</li>
+          <li>Sensor 2: OK</li>
+          <li>Sensor 3: OK</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
